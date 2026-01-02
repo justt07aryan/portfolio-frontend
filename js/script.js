@@ -2,7 +2,13 @@ const burger = document.getElementById("burger");
 const navLinks = document.getElementById("navLinks");
 
 burger.addEventListener("click", () => {
-  navLinks.classList.toggle("nav-active");
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
 });
 
 // Contact Form Submit
